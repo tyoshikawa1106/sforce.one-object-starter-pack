@@ -1,0 +1,15 @@
+<apex:page >
+    <script type="text/javascript">
+
+        function naviToURL() {
+
+            if( (typeof sforce != 'undefined') && (sforce != null) ) {
+                sforce.one.navigateToURL('mailto:testuser@example.com.test');
+            } else {
+                window.location.href = 'mailto:testuser@example.com.test';
+            }
+            
+            return false;
+        }
+    </script>
+</apex:page>

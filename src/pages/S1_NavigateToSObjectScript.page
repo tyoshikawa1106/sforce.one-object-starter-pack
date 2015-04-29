@@ -1,0 +1,16 @@
+<apex:page >
+    <script type="text/javascript">
+
+        function naviToSObject(recordId) {
+
+            if( (typeof sforce != 'undefined') && (sforce != null) ) {
+                // detail or chatter or related
+                sforce.one.navigateToSObject(recordId, 'detail');
+            } else {
+                window.location.href = '/' + recordId;
+            }
+            
+            return false;
+        }
+    </script>
+</apex:page>

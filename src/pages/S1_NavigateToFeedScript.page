@@ -1,0 +1,17 @@
+<apex:page >
+    <script type="text/javascript">
+
+        function naviToFeed() {
+
+            if( (typeof sforce != 'undefined') && (sforce != null) ) {
+                // FILES or BOOKMARKS or COMPANY or GROUPS
+                // or NEWS or PEOPLE or RECORD or TO or TOPICS
+                sforce.one.navigateToFeed('{!$User.Id}', 'FILES');
+            } else {
+                window.location.href = '/_ui/core/chatter/ui/ChatterPage';
+            }
+            
+            return false;
+        }
+    </script>
+</apex:page>

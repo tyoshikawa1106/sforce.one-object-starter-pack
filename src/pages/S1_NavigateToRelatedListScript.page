@@ -1,0 +1,15 @@
+<apex:page >
+    <script type="text/javascript">
+
+        function naviToRelatedList(recordId) {
+
+            if( (typeof sforce != 'undefined') && (sforce != null) ) {
+                sforce.one.navigateToRelatedList('Contacts', recordId);
+            } else {
+                window.location.href = '/' + recordId;
+            }
+            
+            return false;
+        }
+    </script>
+</apex:page>

@@ -1,0 +1,16 @@
+<apex:page controller="S1_SforceOneController" showHeader="false" sidebar="false" standardStylesheets="false" docType="html-5.0" id="page">
+    
+    <apex:stylesheet value="{!$Resource.sforceOneStyleCss}" />
+    <apex:include pageName="S1_SforceOneCommonCss" />
+    
+    <div id="vf-page">
+        <ul class="list-plain fw-normal man pan">
+            <apex:repeat value="{!accounts}" var="item">
+                <li class="active--list-1 pam text-color-1 f4 border-bottom border--3" onclick="return naviToRelatedList('{!item.Id}');">
+                    <apex:outputText value="{!item.Name}" />
+                </li>   
+            </apex:repeat>
+        </ul>
+    </div>
+    <apex:include pageName="S1_NavigateToRelatedListScript" />
+</apex:page>

@@ -1,0 +1,7 @@
+<apex:page >
+    <style type="text/css">
+        .padding {
+            padding: 100px;
+        }
+    </style>
+</apex:page>

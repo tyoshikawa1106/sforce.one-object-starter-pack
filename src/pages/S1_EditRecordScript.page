@@ -1,0 +1,15 @@
+<apex:page >
+    <script type="text/javascript">
+
+        function doEditRecord(recordId) {
+
+            if( (typeof sforce != 'undefined') && (sforce != null) ) {
+                sforce.one.editRecord(recordId); 
+            } else {
+                window.location.href = '/' + recordId + '/e?retURL={!$Page.S1_EditRecord}';
+            }
+            
+            return false;
+        }
+    </script>
+</apex:page>

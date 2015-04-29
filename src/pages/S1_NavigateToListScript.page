@@ -1,0 +1,15 @@
+<apex:page >
+    <script type="text/javascript">
+
+        function naviToList(recordId) {
+
+            if( (typeof sforce != 'undefined') && (sforce != null) ) {
+                sforce.one.navigateToList(recordId, '', 'Account');
+            } else {
+                window.location.href = '/001';
+            }
+            
+            return false;
+        }
+    </script>
+</apex:page>

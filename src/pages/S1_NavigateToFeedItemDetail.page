@@ -1,0 +1,25 @@
+<apex:page controller="S1_SforceOneController" showHeader="false" sidebar="false" standardStylesheets="false" docType="html-5.0" id="page">
+    
+    <apex:stylesheet value="{!$Resource.sforceOneStyleCss}" />
+    <apex:include pageName="S1_SforceOneCommonCss" />
+    
+    <div id="vf-page">
+        <article class="mam bg-1 border border--3 brm">
+            <ul class="man pan list-plain">
+                <apex:repeat value="{!feedItems}" var="item">
+                    <li class="pam border-bottom border--5" onclick="return naviToFeedItemDetail('{!item.Id}');">
+                        <apex:outputText value="{!item.Body}" />
+                        <ul class="list-plain man pan">
+                            <li class="f5 text-color-2">
+                                <apex:outputText value="{0, date, yyyy/mm/dd}">
+                                    <apex:param value="{!item.CreatedDate}" />
+                                </apex:outputText>
+                            </li>
+                        </ul>
+                    </li>   
+                </apex:repeat>
+            </ul>
+        </article>
+    </div>
+    <apex:include pageName="S1_NavigateToFeedItemDetailScript" />
+</apex:page>

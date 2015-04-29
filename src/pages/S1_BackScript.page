@@ -1,0 +1,28 @@
+<apex:page >
+    <script type="text/javascript">
+
+        function naviToURL() {
+
+            if( (typeof sforce != 'undefined') && (sforce != null) ) {
+                // detail or chatter or related
+                sforce.one.navigateToURL('{!$Page.S1_BackDemo}');
+            } else {
+                window.location.href = '{!$Page.S1_BackDemo}';
+            }
+            
+            return false;
+        }
+
+        function back() {
+
+            if( (typeof sforce != 'undefined') && (sforce != null) ) {
+                // detail or chatter or related
+                sforce.one.back(true);
+            } else {
+                window.location.href = '{!$Page.S1_Back}';
+            }
+            
+            return false;
+        }
+    </script>
+</apex:page>

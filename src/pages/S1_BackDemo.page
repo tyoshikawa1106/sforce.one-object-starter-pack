@@ -1,0 +1,16 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" docType="html-5.0" id="page">
+    
+    <apex:stylesheet value="{!$Resource.sforceOneStyleCss}" />
+    <apex:include pageName="S1_SforceOneCommonCss" />
+    
+    <div id="vf-page">
+        <div class="padding">
+            <button class="btn bg-primary-btn btn--primary pvs size-full brm no-border" onclick="return back();">
+                <span class="text-color-5 f3 fw-semibold">
+                    <apex:outputText value="Back" />
+                </span>
+            </button>
+        </div>
+    </div>
+    <apex:include pageName="S1_BackScript" />
+</apex:page>

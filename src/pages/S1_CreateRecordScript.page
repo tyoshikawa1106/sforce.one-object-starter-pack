@@ -1,0 +1,15 @@
+<apex:page >
+    <script type="text/javascript">
+
+        function doCreateAccount() {
+
+            if( (typeof sforce != 'undefined') && (sforce != null) ) {
+                sforce.one.createRecord('Account'); 
+            } else {
+                window.location.href = '{!URLFOR($Action.Account.New)}';
+            }
+            
+            return false;
+        }
+    </script>
+</apex:page>
